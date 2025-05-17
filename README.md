@@ -56,7 +56,8 @@ Find all savings or investment accounts with no transaction in the **past year (
 - Ensured exclusion of accounts with no recorded activity using `transaction_date IS NOT NULL`.
 
 ### Q4: Customer Lifetime Value (Estimated)
-**Objective**
+#### Objective
+
 Estimate a simple CLV for each customer using:
 - Account tenure (i.e. the number of months since the signup of each customer).
 - Number of `successful` transactions
