@@ -12,7 +12,7 @@ SELECT
     COUNT(DISTINCT CASE
             WHEN plan.is_a_fund = 1 THEN plan.id
         END) AS investment_count,
-    ROUND(SUM(savingsacc.confirmed_amount), 2) AS total_deposits
+    ROUND(SUM(savingsacc.confirmed_amount) / 100, 2) AS total_deposits
 FROM
     adashi_staging.users_customuser cust_user
         LEFT JOIN
