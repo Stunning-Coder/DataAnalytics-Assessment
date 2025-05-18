@@ -20,7 +20,7 @@ FROM
         LEFT JOIN
     adashi_staging.savings_savingsaccount savingsacc ON plan.id = savingsacc.plan_id
 WHERE
-    plan.locked = 1
+    plan.locked = 1 and savingsacc.transaction_status = 'success'
 GROUP BY cust_user.id , cust_user.first_name , cust_user.last_name
 HAVING COUNT(DISTINCT CASE
         WHEN plan.is_regular_savings = 1 THEN plan.id
