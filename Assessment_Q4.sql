@@ -11,11 +11,10 @@ SELECT
         cust_user.date_joined,
         CURRENT_DATE()) AS tenure_months,
     COUNT(savingsacc.transaction_date) AS total_transactions,
-    ROUND((COUNT(savingsacc.transaction_date) / NULLIF(TIMESTAMPDIFF(MONTH,
-                        cust_user.date_joined,
-                        CURRENT_DATE()),
-                    0)) * 12 * (0.001 * AVG(savingsacc.confirmed_amount)),
-            2) AS estimated_clv
+    ROUND(
+        (COUNT(savingsacc.transaction_date) / NULLIF(TIMESTAMPDIFF(MONTH, cust_user.date_joined, CURRENT_DATE()), 0)) * 12
+        * (AVG(savingsacc.confirmed_amount) / 100), -- assuming confirmed_amount in kobo, convert to naira
+    2) AS estimated_clv
 FROM
     adashi_staging.users_customuser cust_user
         LEFT JOIN
