@@ -85,6 +85,6 @@ The process emphasized not just querying, but reasoning, data hygiene, and analy
 
 
 p.s.
- Upon upload, made some changes to th committed scripts, including:
+ Upon upload, made some changes to the committed scripts, including:
  - dividing by 100 since the amount values are in kobo not naira hence a division by 100
  - optimal efficiency
