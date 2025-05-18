@@ -83,3 +83,8 @@ This assessment required blending SQL proficiency with applied business logic. E
 
 The process emphasized not just querying, but reasoning, data hygiene, and analytical storytelling.
 
+
+p.s.
+ Upon upload, made some changes to th committed scripts, including:
+ - dividing by 100 since the amount values are in kobo not naira hence a division by 100
+ - optimal efficiency
