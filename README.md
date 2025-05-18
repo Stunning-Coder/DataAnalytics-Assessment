@@ -5,7 +5,7 @@ The queries were written in standard MySQL syntax and tested against a normalize
 - `users_customuser` - contains customer information
 - `plans_plan` - contains records of investment and saving plans created by customer
 - `savings_savingsaccount` - contains transactions/deposits details
-- `withdrawals_withdrawal` -  records of withdrawal transactions (though this table was rarely used as it wasn't significant to answering any of the provided assessment questions.
+- `withdrawals_withdrawal` -  records of withdrawal transactions (unused during this exercise).
 
 ## Assessment Tasks & SQL Solutions
 ### Q1: High-Value Customers with Multiple Products
